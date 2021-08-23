@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+    <style>
+        .container {
+            width: 600px;
+            margin: auto;
+            display: block;
+        }
+
+        .containeravatar {
+            width: 600px;
+            margin: auto;
+            display: block;
+        }
+
+        .box {
+            width: 250px;
+            padding: 100px 0;
+            text-align: center;
+            background: #abc;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .button {
+            display: block;
+        }
+
+        .admin {
+            border: 5px;
+            border-style: solid;
+        }
+
+
+        .avatarimg {
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-size: cover;
+}
+
+
+
+
+    </style>
+    
+
+</head>
+<body>
+    <h1> Titre Page</h1>
+
+    <div id="app">
+        
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+            <button class="button" @click="age++;">increase</button>
+            <button class="button" @click="age--;">decrease</button>
+            <div class="button" @click="changeTitle('lol')">
+                coucou
+            </div>
+       
+            
+
+
+        
+            <br>
+        
+            <div class="container">
+        
+                <div class="box" @mouseover="handleEvents('lol', $event)">mouse over</div>
+        
+                <div class="box" @mouseleave="handleEvents('lol', $event)">mouse leave</div>
+        
+                <div class="box" @dblclick="handleEvents('lol', $event)">double click</div>
+        
+                <div class="box" @mousemove="handleMouseMove($event)">{{ x }}, {{ y }}</div>
+        
+            </div>
+        
+            <div class="containeravatar">
+        
+                <!-- <p>{{ users[0].username }}, {{ users[0].age }} </p>
+        
+                <p>{{ users[1].username }}, {{ users[1].age }} </p>    
+         -->
+                
+                <div class="box" v-for="user in users" @dblclick="makeAdmin(user)" :class="{admin : user.isAdmin }">
+                    <p>{{ user.username }}, {{ users[0].age }}
+                        <div class="avatarimg" :style="{ backgroundImage: 'url(img/' + user.profil + ')' }"></div> 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="button" @click="toggleShowBooks()">
+            <!-- <span v-if="!showBooks"> Show</span>
+            <span v-if="showBooks"> Hide</span> -->
+
+            <!-- ou alors : -->
+              <span v-if="!showBooks"> Show</span>
+              <span v-else> Hide</span>
+            </button>
+        
+            <div v-show="showBooks">currently showing ...</div>
+
+            <!-- attribute binding -->
+            <a v-bind:href="url">best website ever !</a> <br>
+            <!-- attribute binding abbreviation -->
+            <a :href="url">best website ever !</a> 
+
+
+
+        </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
+
