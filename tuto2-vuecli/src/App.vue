@@ -6,8 +6,10 @@
 
 <input type="text" ref="inputlolo">
 <button @click="clickButton()">click here</button>
-<Modal :titre="titreLolo" :lolo="arrayVar" theme="sale"/>
+<Modal :titre="titreLolo" :lolo="arrayVar" theme='special'/>
 </template> 
+
+
 
 
 <script>

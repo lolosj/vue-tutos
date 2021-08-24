@@ -1,9 +1,9 @@
 <template>
     <div class="backdrop">
-        <div class="modal">
-            <h1> {{ titre }} </h1>
-            https://www.youtube.com/watch?v=KM1U6DqZf8M&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=5 15m41
-            <p v-for="a in lolo"> {{ a }} </p>
+        <div class="modal" 
+            :class="{specialtheme : theme === 'special' }">
+                <h1> {{ titre }} </h1>
+                <p v-for="a in lolo"> {{ a }} </p>
         </div>
     </div>
 </template> 
