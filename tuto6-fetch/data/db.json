@@ -1,0 +1,8 @@
+{
+    "jobs": [
+        {"name": "pompier", "id":1, "details":"nikemouk1"},
+        { "name": "policier", "id":2, "details":"nikemouk222" }, 
+        { "name": "fermier", "id":3, "details":"nikemou33" }
+    ],
+    "prout": [1, 2, 3]
+}
