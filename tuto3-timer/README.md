@@ -1,4 +1,4 @@
-# model-project
+# reaction-timer
 
 ## Project setup
 ```
