@@ -1,0 +1,7 @@
+{
+    "jobs": [
+        {"name": "rapide 1", "id":1, "description":"111111"},
+        { "name": "rapide 2", "id":2, "description":"22222222" }, 
+        { "name": "rapide 3", "id":3, "description":"33333333" }
+    ]
+}

@@ -1,8 +1,8 @@
 {
     "jobs": [
-        {"name": "pompier", "id":1, "details":"nikemouk1"},
-        { "name": "policier", "id":2, "details":"nikemouk222" }, 
-        { "name": "fermier", "id":3, "details":"nikemou33" }
+        {"name": "pompier", "id":"lent_1", "description":"nikemouk1"},
+        { "name": "policier", "id":"lent_2", "description":"nikemouk222" }, 
+        { "name": "fermier", "id":"lent_3", "description":"nikemou33" }
     ],
     "prout": [1, 2, 3]
 }

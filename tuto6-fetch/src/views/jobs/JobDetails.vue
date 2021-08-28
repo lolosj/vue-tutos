@@ -1,8 +1,8 @@
 <template>
   <h1> Job Details Page </h1>
   <div v-if="job">
-    <p> {{ job.title }} </p>
-    <p> {{ job.details }} </p>
+    <p> {{ job.name }} </p>
+    <p> {{ job.description }} </p>
   </div>
   <div v-else>
   <p> loading ... </p>
@@ -23,11 +23,20 @@ export default {
     },
     props: ['id'],
     mounted() {
-      fetch('http://localhost:3000/jobs/' + this.id)
-        .then( res => res.json())
-        .then(data => this.job = data)
-        .catch(err => console.log(err.message));    
-    }
+      
+      if (this.id.startsWith('lent_')) {
+
+        fetch('http://localhost:3000/jobs/' + this.id)
+          .then( res => res.json())
+          .then(data => this.job = data)
+          .catch(err => console.log(err.message));    
+      } else {
+        fetch('http://localhost:3001/jobs/' + this.id)
+          .then( res => res.json())
+          .then(data => this.job = data)
+          .catch(err => console.log(err.message));        
+          }
+      }
 }
 </script>
 
