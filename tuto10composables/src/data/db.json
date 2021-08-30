@@ -1,0 +1,24 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "post 1", 
+            "body": "body 1body 1body 1body 1body 1body 1body 1body 1body 1body 1body 1body 1",
+            "tags": [
+                "webdev",
+                "coding",
+                "news"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "post 2222222222", 
+            "body": "222 22 body22222bo222 22 body22222bo2body22222body22222body",        
+            "tags": [
+                "webdev",
+                "coding",
+                "css"
+            ]
+        }
+    ]
+}
